@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analytics</title>
+<link rel="stylesheet" type="text/css" href="login.css">
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<h1> Intent Frequency </h1>
+<div id = "barChart" style = "width: 400px; height: 400px;"></div>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+
+var data = [
+  {
+    x: ['giraffes', 'orangutans', 'monkeys', 'Chicken', 'Pie'],
+    y: [20, 14, 23, 12, 19],
+    type: 'bar'
+  }
+];
+var layout = {
+	
+	showlegend: false};
+Plotly.newPlot('barChart', data, layout, {displayModeBar: false});
+
+</script>
+
+<form name = "sendMessage" id  = "form" onSubmit="validateForm()" method="post"> 
+	<input type="text" name="usr" placeholder="Type Message">
+	<input type="submit" value="Continue"/>
+</form>
+
+</body>
+</html>
